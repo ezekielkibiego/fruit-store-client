@@ -25,18 +25,22 @@ export const Fruits = () => {
     }, [])
 
     if (loading) return <Loader />
-    if (error) return <div>Error: {error}</div>
+    if (error) return <div className='error-state'>Error: {error}</div>
 
     return (
-        <div>
-            <h2>Fresh Fruits</h2>
-            <p>Discover the best selection of fresh fruits delivered straight to your doorstep.</p>
-            <p >{fruits.length} fruits available</p>
+        <main className='fruits-page'>
+            <section className='fruits-hero'>
+                <p className='hero-kicker'>Farm to Basket</p>
+                <h2>Fresh Fruits</h2>
+                <p>Discover the best selection of fresh fruits delivered straight to your doorstep.</p>
+                <p className='hero-count'>{fruits.length} fruits available</p>
+            </section>
+
             <div className="fruits-grid">
                 {fruits.map((fruit) => (
                     <FruitCard key={fruit._id} fruit={fruit} />
                 ))}
             </div>
-        </div>
+        </main>
     )
 }

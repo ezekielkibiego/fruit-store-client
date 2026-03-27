@@ -14,7 +14,7 @@ const getEmoji = (name) => {
 };
 
 
-const FruitCard = (fruit) => {
+const FruitCard = ({ fruit }) => {
 
 
     return (
@@ -23,8 +23,8 @@ const FruitCard = (fruit) => {
             <div className="fruit-info">
                 <h3>{fruit.name}</h3>
                 <div className="fruit-meta">
-                    <span>Ksh {fruit.price.toFixed(2)}</span>
-                    <span>Qty: {fruit.quantity}</span>
+                    <span className='fruit-price'>Ksh {fruit.price}</span>
+                    <span className='fruit-qty'>Qty: {fruit.quantity}</span>
                 </div>
             </div>
         </div>
