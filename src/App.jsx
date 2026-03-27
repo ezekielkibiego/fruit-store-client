@@ -1,10 +1,15 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div>
-      <h1 className='text-red-500'>Fruit Store</h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        
+      </Routes>
+    </Router>
   )
 }
 
