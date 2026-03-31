@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { useAuth } from '../context/AuthContext';
 import API from '../api/axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const { login } = useAuth();
@@ -82,6 +82,13 @@ const Login = () => {
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
+
+        <p className="text-center text-sm text-gray-600 mt-4">
+          Don't have an account?{' '}
+          <Link to="/register" className="font-semibold text-orange-600 hover:text-orange-700">
+            Register here
+          </Link>
+        </p>
 
         {error && (
           <div className="mt-6 p-4 bg-red-50 border-2 border-red-300 rounded-lg text-red-700 text-sm text-center">
