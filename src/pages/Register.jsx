@@ -87,28 +87,28 @@ const Register = () => {
               value={form.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange-500 focus:bg-white focus:ring=2 focus:ring-orange=200 transition"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange-500 focus:bg-white focus:ring-2 focus:ring-orange-200 transition"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-orange-600 hover:bg-orange_7００ disabled:opacity=6０ disabled:cursor-notallowed text-white font-semibold py=3 px=4 rounded-lg transition-colors duration=2００ mt=２"
+            className="w-full bg-orange-600 hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 mt-2"
           >
             {loading ? 'Creating account...' : 'Register'}
           </button>
         </form>
 
         {error && (
-          <div className="mt=6 p=4 bg-red_5０ border=２ border-red_3００ rounded-lg text-red_7００ text-sm text-center">
+          <div className="mt-6 p-4 bg-red-50 border-2 border-red-300 rounded-lg text-red-700 text-sm text-center">
             {error}
           </div>
         )}
 
-        <p className="text-center text-sm text-gray_6００ mt=4">
+        <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{' '}
-          <Link to="/login" className="font-semibold text-orange_6００ hover:text-orange_7００">
+          <Link to="/login" className="font-semibold text-orange-600 hover:text-orange-700">
             Login here
           </Link>
         </p>
