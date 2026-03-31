@@ -32,19 +32,19 @@ export const useFruits = () => {
         }
     };
 
-    const editFruit = async (id, data) => {
+    const editFruit = async (_id, data) => {
         try {
-            const { data: updatedFruit } = await updateFruit(id, data);
-            setFruits((prev) => prev.map((fruit) => (fruit._id === id ? updatedFruit : fruit)));
+            const { data: updatedFruit } = await updateFruit(_id, data);
+            setFruits((prev) => prev.map((fruit) => (fruit._id === _id ? updatedFruit : fruit)));
         } catch (err) {
             setError(err.message || "Failed to update fruit");
         }
     };
 
-    const removeFruit = async (id) => {
+    const removeFruit = async (_id) => {
         try {
-            await deleteFruit(id);
-            setFruits((prev) => prev.filter((fruit) => fruit._id !== id));
+            await deleteFruit(_id);
+            setFruits((prev) => prev.filter((fruit) => fruit._id !== _id));
         } catch (err) {
             setError(err.message || "Failed to delete fruit");
         }
